@@ -1,0 +1,8 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT zippyuapp.wsgi
+
+runtime_config:
+  python_version: 3
+
+
