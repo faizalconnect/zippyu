@@ -16,13 +16,13 @@ def hello_world(request):
 	list_arr = os.listdir('.')
 	data = ' '.join(str(data) for data in list_arr)
 
-	post = Post.objects.create(
-	title = 'Hello MongoDB!',
-	text = 'Just wanted to drop a note from Django. Cya!',
-	tags = ['mongodb', 'django']
-	)
-	print post.comments
-	post.comments.extend(['Great post!', 'Please, do more of these!'])
-	post.save()
-	print Post.objects.get().comments
+	# post = Post.objects.create(
+	# title = 'Hello MongoDB!',
+	# text = 'Just wanted to drop a note from Django. Cya!',
+	# tags = ['mongodb', 'django']
+	# )
+	# print post.comments
+	# post.comments.extend(['Great post!', 'Please, do more of these!'])
+	# post.save()
+	# print Post.objects.get().comments
 	return HttpResponse(data)
